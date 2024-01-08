@@ -1,0 +1,195 @@
+@charset "UTF-8";
+
+body {
+	background-color: #4c8caf;
+	color: white;
+	font-family: 'Arial', sans-serif;
+	text-align: center;
+	padding-top: 50px;
+}
+
+h1 {
+	font-size: 3em;
+	margin-bottom: 20px;
+}
+
+h2 {
+	margin: 10px 0;
+}
+
+form {
+	margin-top: 20px;
+}
+
+button, input[type="submit"] {
+	background-color: #21a1f1;
+	border: none;
+	color: black;
+	width: 200px;
+	padding: 5px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 4px;
+	transition: background-color 0.3s;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #03bff4;
+}
+
+.prologue, .resultText{
+	margin: 0 300px;
+	text-align: left;
+	margin-bottom: 20px;
+	font-size: 24px;
+}
+
+.scrollBox {
+	width: 500px;
+	height: 400px;
+	margin: auto;
+	overflow-y: scroll;
+	border: 1px solid black;
+	text-align: left;
+	border-radius: 5px;
+	background-color: white;
+	color: black;
+	padding: 25px;
+/* スクロールバーの削除 */
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+/* スクロールバーの削除 */
+.scrollBox::-webkit-scrollbar{
+	display: none;
+}
+
+.scrollBox p{
+	margin: 0 0 0 10px;
+}
+
+ul.controlInfo{
+	display: flex;
+	list-style-type: none;
+	justify-content: space-between;
+	margin: 0;
+	padding: 0;
+}
+
+ul.section {
+	list-style-type: none;
+	margin-left:42px;
+}
+
+.company:before {
+	content: '事業所名';
+	margin-left:-72px;
+}
+
+.address:before {
+	content: '就業場所';
+	margin-left:-72px;
+}
+
+.jobTitle:before {
+	content: '職種　　';
+	margin-left:-72px;
+}
+
+.jobContent:before {
+	content: '仕事内容';
+	margin-left:-72px;
+}
+
+.skill:before {
+	content: '能力技能';
+	margin-left:-72px;
+}
+
+.career:before {
+	content: '経歴　　';
+	margin-left:-72px;
+}
+
+.basicSalary:before {
+	content: '基本給　';
+	margin-left:-72px;
+}
+
+.allowance:before {
+	content: '手当　　';
+	margin-left:-72px;
+}
+
+.salaryRaise:before {
+	content: '昇給　　';
+	margin-left:-72px;
+}
+
+.bonus:before {
+	content: '賞与　　';
+	margin-left:-72px;
+}
+
+.workHours:before {
+	content: '時間帯　';
+	margin-left:-72px;
+}
+
+.overtime:before {
+	content: '平均残業';
+	margin-left:-72px;
+}
+
+.holiday:before {
+	content: '休日　　';
+	margin-left:-72px;
+}
+
+.turnover:before {
+	content: '離職率　';
+	margin-left:-72px;
+}
+
+.notices:before {
+	content: '特記事項';
+	margin-left:-72px;
+}
+
+.actionToList{
+	margin-top: 20px;
+}
+
+/* スマホ対応 */ 
+@media screen and (max-width:480px) {
+	body{
+		padding: 10px 0%;
+	}
+	
+	h1{
+		font-size: 30px;
+		margin: 10px 0;
+	}
+	
+	h2{
+		font-size: 16px;
+	}
+	
+	.scrollBox {
+		width: 300px;
+		height: 350px;
+	}
+
+	.prologue, .resultText{
+		margin: 0 30px;
+		margin-bottom: 10px;
+		font-size: 20px;
+	}
+}
+
+
