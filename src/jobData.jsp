@@ -1,10 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="jhg_model.JobDataDto"%>
+<%@ page import="jhg_model.Esc" %>
 <%@ page import="java.util.Date" %>
-<%@ page import="java.text.SimpleDateFormat" %>
 <%@ page import="java.util.Random" %>
+<%@ page import="java.text.SimpleDateFormat" %>
 <%
+	// このファイルでは,Esc.html()でエスケープ処理を行う。
+
 	JobDataDto jobData = (JobDataDto) request.getAttribute("jobData");
 
 	//エラーメッセージがあれば受け取る
@@ -46,41 +49,41 @@
 
 			<h2>１ 求人事業所</h2>
 			<ul class="section">
-				<li class="company">: <%= jobData.getCompany() %></li>
-				<li class="address">: <%= jobData.getAddress() %></li>
+				<li class="company">: <%= Esc.html(jobData.getCompany()) %></li>
+				<li class="address">: <%= Esc.html(jobData.getAddress()) %></li>
 			</ul>
 
 			<h2>２ 仕事内容</h2>
 			<ul class="section">
-				<li class="jobTitle">: <%= jobData.getJobTitle() %></li>
-				<li class="jobContent">: <%= jobData.getJobContent() %></li>
+				<li class="jobTitle">: <%= Esc.html(jobData.getJobTitle()) %></li>
+				<li class="jobContent">: <%= Esc.html(jobData.getJobContent()) %></li>
 			</ul>
 
 			<h2>３ 応募条件</h2>
 			<ul class="section">
-				<li class="skill">: <%= jobData.getSkill() %></li>
-				<li class="career">: <%= jobData.getCareer() %></li>
+				<li class="skill">: <%= Esc.html(jobData.getSkill()) %></li>
+				<li class="career">: <%= Esc.html(jobData.getCareer()) %></li>
 			</ul>
 
 			<h2>４ 賃金・手当</h2>
 			<ul class="section">
-				<li class="basicSalary">: <%= jobData.getBasicSalary() %></li>
-				<li class="allowance">: <%= jobData.getAllowance() %></li>
-				<li class="salaryRaise">: <%= jobData.getSalaryRaise() %></li>
-				<li class="bonus">: <%= jobData.getBonus() %></li>
+				<li class="basicSalary">: <%= Esc.html(jobData.getBasicSalary()) %></li>
+				<li class="allowance">: <%= Esc.html(jobData.getAllowance()) %></li>
+				<li class="salaryRaise">: <%= Esc.html(jobData.getSalaryRaise()) %></li>
+				<li class="bonus">: <%= Esc.html(jobData.getBonus()) %></li>
 			</ul>
 
 			<h2>５ 就業時間</h2>
 			<ul class="section">
-				<li class="workHours">: <%= jobData.getWorkHours() %></li>
-				<li class="overtime">: <%= jobData.getOvertime() %></li>
-				<li class="holiday">: <%= jobData.getHoliday() %></li>
+				<li class="workHours">: <%= Esc.html(jobData.getWorkHours()) %></li>
+				<li class="overtime">: <%= Esc.html(jobData.getOvertime()) %></li>
+				<li class="holiday">: <%= Esc.html(jobData.getHoliday()) %></li>
 			</ul>
 
 			<h2>６ その他</h2>
 			<ul class="section">
-				<li class="turnover">: <%= jobData.getTurnover()%></li>
-				<li class="notices">: <%= jobData.getNotices() %></li>
+				<li class="turnover">: <%= Esc.html(jobData.getTurnover())%></li>
+				<li class="notices">: <%= Esc.html(jobData.getNotices()) %></li>
 			</ul>
 
 		</div>

@@ -1,7 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="jhg_model.ResultDataDto"%>
+<%@ page import="jhg_model.Esc" %>
 <%
+	// このファイルでは,Esc.html()でエスケープ処理を行う。
+
 	ResultDataDto resultData = (ResultDataDto)request.getAttribute("resultData");
 
 	String errorMessage = "";
@@ -25,11 +28,11 @@
 	<% }else{ %>
 		<h1>応募結果</h1>
 		<div class="resultText">
-			<p>あれから３か月。私は<%= resultData.getCompany() %>で働いています。実際に働いてみてわかったこと、感じたことは様々です。 </p>
-			<p>まず、<%= resultData.getCompanyGroupResult() %></p>
-			<p>給与面に関しては、<%= resultData.getSalaryGroupResult() %></p>
-			<p>また、働き方の面では、<%= resultData.getTimeGroupResult() %></p>
-			<p>その他の点として<%= resultData.getNoticesGroupResult() %></p>
+			<p>あれから３か月。私は<%= Esc.html(resultData.getCompany()) %>で働いています。実際に働いてみてわかったこと、感じたことは様々です。 </p>
+			<p>まず、<%= Esc.html(resultData.getCompanyGroupResult()) %></p>
+			<p>給与面に関しては、<%= Esc.html(resultData.getSalaryGroupResult()) %></p>
+			<p>また、働き方の面では、<%= Esc.html(resultData.getTimeGroupResult()) %></p>
+			<p>その他の点として<%= Esc.html(resultData.getNoticesGroupResult()) %></p>
 		</div>
 
 		<div class="actionToData">
